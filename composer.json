@@ -1,0 +1,16 @@
+{
+    "name": "root/work",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Misha Zapalenov",
+            "email": "mzapalenov@mail.ru"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "liw\\": ""
+        }
+    }
+}
