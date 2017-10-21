@@ -160,6 +160,7 @@ $openGraph2    = liw\Programming\analyse\HandlerAnalyse::parseHeaderHtml('#micro
 
 $openGraphDesk = liw\Programming\analyse\HandlerAnalyse::parseHeaderHtml('#microdataOpenGraph .success p');
 
+
 /**
  * Редиректы
  */

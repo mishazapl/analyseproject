@@ -109,7 +109,8 @@
 
             <h2>
                 <a href="#">Заказать консультацию</a><br><br>
-                Заказав консультацию вы сможете разобраться в чем проблема вашего сайта, а так же понять пути его развития
+                Заказав консультацию вы сможете разобраться в чем проблема вашего сайта, а так же понять пути его
+                развития
             </h2>
 
         </div>
@@ -284,901 +285,909 @@
                 </div>
             </div>
         </div>
-
-
-        <!--/GROUP-->
-
-
-        <!--ENTER INFO-->
-        <div class="row result-group pushing-top">
-            <h3>Техническая оптимизация</h3>
-
-            <!--INTERNAL_LINKS-->
-            <div class="result-item">
-                <div class="result-item-short">
-                    <div class="row">
-                        <div class="col-xs-1">
-
-                            <?php
-
-                            if (
-                                trim($checkViewScrin) == 'fail'
-                                ||
-                                trim($checkViewPort) == 'fail'
-                                ||
-                                trim($checksizeElement) == 'fail'
-                                ||
-                                trim($checksizeWord) == 'fail'
-                                ||
-                                trim($checkPlugins) == 'fail'
-                                ||
-                                trim($checkFlowWindow) == 'fail'
-                            ) {
-                                print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            } else {
-                                print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            }
-
-                            ?>
-
-                        </div>
-                        <div class="col-xs-5 result-item-name">
-                            Мобильность
-                        </div>
-                        <div class="col-xs-5 text-right result-item-val">
-                        </div>
-                        <div class="col-xs-1 text-right">
-                            <a href="javascript:void(0);" class="result-item-more">
-                                <i class="fa fa-angle-down fa-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="result-item-full" id="mobile">
-                    <div class="row">
-                        <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
-
-                            <?php
-
-                            print $toView . ': ';
-                            print '<b>' . $toDesk . '</b><br><br>';
-
-                            ?>
-
-                            Скриншот с сайта на
-                            смартфоне: <?php print "<img src=\"http://mini.site-shot.com/480x360/360/jpeg/?$link\" width=\"250\" height=\"200\" alt=\"Скрин сайта\" style=\"border: 1px solid #ccc;\">" . '<br><br>' ?>
-
-                            <?php
-
-                            print $viewPort . ': ';
-                            print '<b>' . $viewPortDesk . '</b><br><br>';
-
-                            print $sizeElement . ': ';
-                            print '<b>' . $sizeElementDesk . '</b><br><br>';
-
-                            print $sizeText . ': ';
-                            print '<b>' . $sizeTextDesk . '</b><br><br>';
-
-                            print $plugins . ': ';
-                            print '<b>' . $pluginsDesk . '</b><br><br>';
-
-                            print $flowWindow . ': ';
-                            print '<b>' . $flowWindowDesk . '</b><br><br>';
-
-
-                            ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--ANALYTICS-->
-            <div class="result-item">
-                <div class="result-item-short">
-                    <div class="row">
-                        <div class="col-xs-1">
-
-                            <?php
-
-                            if ($systemAnalyseDesk == '') {
-                                print "<img src=\"../assets/imgs/$redImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            } else {
-                                print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            }
-
-                            ?>
-                        </div>
-                        <div class="col-xs-5 result-item-name">
-                            Система аналитики
-                        </div>
-                        <div class="col-xs-5 text-right result-item-val">
-                            <?php
-
-                            if ($systemAnalyseDesk == '') {
-                                print '<span style="color: red">(Нет)</span>';
-                            } else {
-                                print '<span style="color: green">(Есть)</span>';
-                            }
-
-                            ?>
-                        </div>
-                        <div class="col-xs-1 text-right">
-                            <a href="javascript:void(0);" class="result-item-more">
-                                <i class="fa fa-angle-down fa-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="result-item-full" id="analytics">
-                    <div class="row">
-                        <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
-                            <?php
-
-                            if ($systemAnalyseDesk == '') {
-                                print '<span style="color: red">У вас нету системы аналитики</span>';
-                            } else {
-                                print '<span style="color: green">' . $systemAnalyseDesk . '</span>';
-                            }
-
-                            ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!--INTERNAL_LINKS-->
-            <div class="result-item">
-                <div class="result-item-short">
-                    <div class="row">
-                        <div class="col-xs-1">
-                            <?php
-
-                            if ($innerLink == 'Внутренние ссылки не найдены.') {
-                                print "<img src=\"../assets/imgs/$redImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            } else {
-                                print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            }
-
-                            ?>
-                        </div>
-                        <div class="col-xs-5 result-item-name">
-                            Внутренние ссылки на странице
-                        </div>
-                        <div class="col-xs-5 text-right result-item-val">
-                            <?php print $innerLink ?>
-                        </div>
-                        <div class="col-xs-1 text-right">
-                            <a href="javascript:void(0);" class="result-item-more">
-                                <i class="fa fa-angle-down fa-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="result-item-full" id="inner">
-                    <div class="row">
-                        <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
-                            <?php print $innerLinkDesk ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!--EXTERNAL_LINKS-->
-            <div class="result-item">
-                <div class="result-item-short">
-                    <div class="row">
-                        <div class="col-xs-1">
-
-                            <?php
-
-                            if (trim($comonLink) == 'Внешние ссылки не найдены.') {
-                                print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            } else {
-                                print "<img src=\"../assets/imgs/$redImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            }
-
-
-                            ?>
-
-                        </div>
-                        <div class="col-xs-5 result-item-name">
-                            Внешние ссылки со страницы
-                        </div>
-                        <div class="col-xs-5 text-right result-item-val">
-                            <?php print $comonLink ?>
-                        </div>
-                        <div class="col-xs-1 text-right">
-                            <a href="javascript:void(0);" class="result-item-more">
-                                <i class="fa fa-angle-down fa-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="result-item-full" id="coomon">
-                    <div class="row">
-                        <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
-                            <div style="margin-top: 15px">
-                                <?php print $comonLinkDesk ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!--SCHEMA.ORG-->
-            <div class="result-item">
-                <div class="result-item-short">
-                    <div class="row">
-                        <div class="col-xs-1">
-
-                            <?php
-
-                            if ($schemaOrgDesk == '') {
-                                print "<img src=\"../assets/imgs/$redImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            } else {
-                                print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            }
-                            ?>
-
-                        </div>
-                        <div class="col-xs-5 result-item-name">
-                            Наличие микроразметки
-                        </div>
-                        <div class="col-xs-5 text-right result-item-val">
-                            <?php
-                            print $schemaOrg;
-                            print '<br>';
-                            print $schemaOrg2;
-                            print '<br><br>';
-                            print $openGraph;
-                            ?>
-                        </div>
-                        <div class="col-xs-1 text-right">
-                            <a href="javascript:void(0);" class="result-item-more">
-                                <i class="fa fa-angle-down fa-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="result-item-full" id="micro">
-                    <div class="row">
-                        <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
-                            <?php
-                            print $openGraph;
-                            print '<br>';
-                            print $openGraph2;
-                            print '<br><br>';
-                            print $openGraphDesk;
-                            print '<br><br>';
-                            print $schemaOrgDesk;
-                            ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!--REDIRECTS-->
-            <div class="result-item">
-                <div class="result-item-short">
-                    <div class="row">
-                        <div class="col-xs-1">
-
-                            <?php
-
-                            if (trim($redirectWww) == 'Перенаправление не настроено.') {
-                                print "<img src=\"../assets/imgs/$redImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            } else {
-                                print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            }
-
-                            ?>
-
-                        </div>
-                        <div class="col-xs-5 result-item-name">
-                            Редиректы
-                        </div>
-                        <div class="col-xs-5 text-right result-item-val">
-                            <?php print $redirectWww ?>
-                        </div>
-                        <div class="col-xs-1 text-right">
-                            <a href="javascript:void(0);" class="result-item-more">
-                                <i class="fa fa-angle-down fa-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="result-item-full" id="redirect">
-                    <div class="row">
-                        <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
-                            <?php print $redirectWwwDesk ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!--ROBOTS.TXT-->
-            <div class="result-item">
-                <div class="result-item-short">
-                    <div class="row">
-                        <div class="col-xs-1">
-
-                            <?php
-
-                            if (trim($robotsTxt) == 'Файл robots.txt не найден.') {
-                                print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            } else {
-                                print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            }
-
-                            ?>
-
-                        </div>
-                        <div class="col-xs-5 result-item-name">
-                            Файл robots.txt
-                        </div>
-                        <div class="col-xs-5 text-right result-item-val">
-                            <?php print $robotsTxt ?>
-                        </div>
-                        <div class="col-xs-1 text-right">
-                            <a href="javascript:void(0);" class="result-item-more">
-                                <i class="fa fa-angle-down fa-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="result-item-full" id="robots">
-                    <div class="row">
-                        <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
-                            <?php print $robotsTxtDesk ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!--SITEMAP-->
-            <div class="result-item">
-                <div class="result-item-short">
-                    <div class="row">
-                        <div class="col-xs-1">
-
-                            <?php
-
-                            if (trim($siteMap) == 'Карта сайта не найдена.') {
-                                print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            } else {
-                                print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            }
-
-                            ?>
-
-                        </div>
-                        <div class="col-xs-5 result-item-name">
-                            Наличие Sitemap
-                        </div>
-                        <div class="col-xs-5 text-right result-item-val">
-                            <?php print $siteMap ?>
-                        </div>
-                        <div class="col-xs-1 text-right">
-                            <a href="javascript:void(0);" class="result-item-more">
-                                <i class="fa fa-angle-down fa-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="result-item-full" id="sitemap">
-                    <div class="row">
-                        <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
-                            <?php print $siteMapDesk ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!--FAVICON-->
-            <div class="result-item">
-                <div class="result-item-short">
-                    <div class="row">
-                        <div class="col-xs-1">
-
-                            <?php
-
-                            if (strlen($favicon) == 67) {
-                                print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            } else {
-                                print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            }
-
-                            ?>
-
-                        </div>
-                        <div class="col-xs-5 result-item-name">
-                            Favicon
-                        </div>
-                        <div class="col-xs-5 text-right result-item-val">
-                            <?php print $favicon ?>
-                        </div>
-                        <div class="col-xs-1 text-right">
-                            <a href="javascript:void(0);" class="result-item-more">
-                                <i class="fa fa-angle-down fa-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="result-item-full" id="favicon">
-                    <div class="row">
-                        <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
-                            <?php print $faviconDesk ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!--INTERNAL_LINKS-->
-            <div class="result-item">
-                <div class="result-item-short">
-                    <div class="row">
-                        <div class="col-xs-1">
-
-                            <?php
-
-                            if (trim($page404) == 'Все отлично, получен код 404.') {
-                                print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            } else {
-                                print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                            }
-
-                            ?>
-
-                        </div>
-                        <div class="col-xs-5 result-item-name">
-                            Страница 404
-                        </div>
-                        <div class="col-xs-5 text-right result-item-val">
-                            <?php
-                            print $page404;
-                            print '<br>';
-                            print $page404_2;
-                            ?>
-                        </div>
-                        <div class="col-xs-1 text-right">
-                            <a href="javascript:void(0);" class="result-item-more">
-                                <i class="fa fa-angle-down fa-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="result-item-full" id="404">
-                    <div class="row">
-                        <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
-                            <?php
-                            print $page404Desk;
-                            print '<br>';
-                            print $page404Desk_2;
-                            ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!--INTERNAL_LINKS-->
-            <div class="result-item">
-                <div class="result-item-short">
-                    <div class="row">
-                        <div class="col-xs-1">
-
-                            <?php
-
+    </div>
+
+
+    <!--/GROUP-->
+
+
+    <!--ENTER INFO-->
+    <div class="row result-group pushing-top">
+        <h3>Техническая оптимизация</h3>
+
+        <!--INTERNAL_LINKS-->
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
+
+                        <?php
+
+                        if (
+                            trim($checkViewScrin) == 'fail'
+                            ||
+                            trim($checkViewPort) == 'fail'
+                            ||
+                            trim($checksizeElement) == 'fail'
+                            ||
+                            trim($checksizeWord) == 'fail'
+                            ||
+                            trim($checkPlugins) == 'fail'
+                            ||
+                            trim($checkFlowWindow) == 'fail'
+                        ) {
                             print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        } else {
+                            print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        }
 
-                            ?>
+                        ?>
 
-                        </div>
-                        <div class="col-xs-5 result-item-name">
-                            Скорость загрузки
-                        </div>
-                        <div class="col-xs-5 text-right result-item-val">
-                            <?php print $speedLoad ?>
-                        </div>
-                        <div class="col-xs-1 text-right">
-                            <a href="javascript:void(0);" class="result-item-more">
-                                <i class="fa fa-angle-down fa-2x"></i>
-                            </a>
-                        </div>
+                    </div>
+                    <div class="col-xs-5 result-item-name">
+                        Мобильность
+                    </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                    </div>
+                    <div class="col-xs-1 text-right">
+                        <a href="javascript:void(0);" class="result-item-more">
+                            <i class="fa fa-angle-down fa-2x"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="result-item-full" id="speed">
-                    <div class="row">
-                        <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
-                            <?php
+            </div>
+            <div class="result-item-full" id="mobile">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
 
-                            print $cashBrowser . ': ';
-                            print ' ';
-                            print $cashBrowserDesk . '<br><br>';
+                        <?php
 
-                            print $timeRespone . ': ';
-                            print ' ';
-                            print $timeResponeDesk . '<br><br>';
+                        print $toView . ': ';
+                        print '<b>' . $toDesk . '</b><br><br>';
 
-                            print $gzip . ': ';
-                            print ' ';
-                            print $gzipDesk . '<br><br>';
+                        ?>
 
-                            print $compressImage . ': ';
-                            print ' ';
-                            print $compressImageDesk . '<br><br>';
+                        Скриншот с сайта на
+                        смартфоне: <?php print "<img src=\"http://mini.site-shot.com/480x360/360/jpeg/?$link\" width=\"250\" height=\"200\" alt=\"Скрин сайта\" style=\"border: 1px solid #ccc;\">" . '<br><br>' ?>
+
+                        <?php
+
+                        print $viewPort . ': ';
+                        print '<b>' . $viewPortDesk . '</b><br><br>';
+
+                        print $sizeElement . ': ';
+                        print '<b>' . $sizeElementDesk . '</b><br><br>';
+
+                        print $sizeText . ': ';
+                        print '<b>' . $sizeTextDesk . '</b><br><br>';
+
+                        print $plugins . ': ';
+                        print '<b>' . $pluginsDesk . '</b><br><br>';
+
+                        print $flowWindow . ': ';
+                        print '<b>' . $flowWindowDesk . '</b><br><br>';
 
 
-                            print $minifyRes . ': ';
-                            print ' ';
-                            print $minifyResDesk . '<br><br>';
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                            print $visibleCont . ': ';
-                            print ' ';
-                            print $visibleContDesk . '<br><br>';
+        <!--ANALYTICS-->
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
 
-                            print $jsHtmlCss . ': ';
-                            print ' ';
-                            print $jsHtmlCssDesk . '<br><br>';
+                        <?php
 
-                            print $redirectSpeed . ': ';
-                            print ' ';
-                            print $redirectSpeedDesk . '<br><br>';
+                        if ($systemAnalyseDesk == '') {
+                            print "<img src=\"../assets/imgs/$redImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        } else {
+                            print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        }
 
-                            ?>
+                        ?>
+                    </div>
+                    <div class="col-xs-5 result-item-name">
+                        Система аналитики
+                    </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                        <?php
+
+                        if ($systemAnalyseDesk == '') {
+                            print '<span style="color: red">(Нет)</span>';
+                        } else {
+                            print '<span style="color: green">(Есть)</span>';
+                        }
+
+                        ?>
+                    </div>
+                    <div class="col-xs-1 text-right">
+                        <a href="javascript:void(0);" class="result-item-more">
+                            <i class="fa fa-angle-down fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="result-item-full" id="analytics">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
+                        <?php
+
+                        if ($systemAnalyseDesk == '') {
+                            print '<span style="color: red">У вас нету системы аналитики</span>';
+                        } else {
+                            print '<span style="color: green">' . $systemAnalyseDesk . '</span>';
+                        }
+
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--INTERNAL_LINKS-->
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
+                        <?php
+
+                        if ($innerLink == 'Внутренние ссылки не найдены.') {
+                            print "<img src=\"../assets/imgs/$redImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        } else {
+                            print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        }
+
+                        ?>
+                    </div>
+                    <div class="col-xs-5 result-item-name">
+                        Внутренние ссылки на странице
+                    </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                        <?php print $innerLink ?>
+                    </div>
+                    <div class="col-xs-1 text-right">
+                        <a href="javascript:void(0);" class="result-item-more">
+                            <i class="fa fa-angle-down fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="result-item-full" id="inner">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
+                        <?php print $innerLinkDesk ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--EXTERNAL_LINKS-->
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
+
+                        <?php
+
+                        if (trim($comonLink) == 'Внешние ссылки не найдены.') {
+                            print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        } else {
+                            print "<img src=\"../assets/imgs/$redImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        }
+
+
+                        ?>
+
+                    </div>
+                    <div class="col-xs-5 result-item-name">
+                        Внешние ссылки со страницы
+                    </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                        <?php print $comonLink ?>
+                    </div>
+                    <div class="col-xs-1 text-right">
+                        <a href="javascript:void(0);" class="result-item-more">
+                            <i class="fa fa-angle-down fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="result-item-full" id="coomon">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
+                        <div style="margin-top: 15px">
+                            <?php print $comonLinkDesk ?>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!--ENTER INFO-->
-            <div class="row result-group pushing-top">
-                <h3>Текстовая оптимизация</h3>
+        </div>
 
 
-                <!--INTERNAL_LINKS-->
-                <div class="result-item">
-                    <div class="result-item-short">
-                        <div class="row">
-                            <div class="col-xs-1">
+        <!--SCHEMA.ORG-->
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
 
-                                <?php
+                        <?php
 
-                                if (trim($titleLink) == 'Не найдено.') {
-                                    print "<img src=\"../assets/imgs/$redImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                                } else {
-                                    print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                                }
+                        if ($schemaOrgDesk == '') {
+                            print "<img src=\"../assets/imgs/$redImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        } else {
+                            print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        }
+                        ?>
 
-                                ?>
-
-
-                            </div>
-                            <div class="col-xs-5 result-item-name">
-                                Title
-                            </div>
-                            <div class="col-xs-5 text-right result-item-val">
-                                <?php print $titleLink ?>
-                            </div>
-                            <div class="col-xs-1 text-right">
-                                <a href="javascript:void(0);" class="result-item-more">
-                                    <i class="fa fa-angle-down fa-2x"></i>
-                                </a>
-                            </div>
-                        </div>
                     </div>
-                    <div class="result-item-full" id="title">
-                        <div class="row">
-                            <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
-                                <?php print $titleLinkDesk ?>
-                            </div>
-                        </div>
+                    <div class="col-xs-5 result-item-name">
+                        Наличие микроразметки
+                    </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                        <?php
+                        print $schemaOrg;
+                        print '<br>';
+                        print $schemaOrg2;
+                        print '<br><br>';
+                        if (trim($openGraphDesk) == '') {
+                            print 'Микроразметка Open Graph Не найдена';
+                        } else {
+                            print 'Микроразметка Open Graph Найдена';
+                        }
+                        ?>
+                    </div>
+                    <div class="col-xs-1 text-right">
+                        <a href="javascript:void(0);" class="result-item-more">
+                            <i class="fa fa-angle-down fa-2x"></i>
+                        </a>
                     </div>
                 </div>
-
-
-                <!--INTERNAL_LINKS-->
-                <div class="result-item">
-                    <div class="result-item-short">
-                        <div class="row">
-                            <div class="col-xs-1">
-
-                                <?php
-
-                                if (trim($headerLinkDesk) == 'Не найдено.') {
-                                    print "<img src=\"../assets/imgs/$redImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                                } else {
-                                    print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                                }
-
-                                ?>
-
-                            </div>
-                            <div class="col-xs-5 result-item-name">
-                                Description
-                            </div>
-                            <div class="col-xs-5 text-right result-item-val">
-                                <?php print $headerLinkDesk ?>
-                            </div>
-                            <div class="col-xs-1 text-right">
-                                <a href="javascript:void(0);" class="result-item-more">
-                                    <i class="fa fa-angle-down fa-2x"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="result-item-full" id="desk">
-                        <div class="row">
-                            <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
-                                <?php print $headerLinkDesk2 ?>
-                            </div>
-                        </div>
+            </div>
+            <div class="result-item-full" id="micro">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
+                        <?php
+                        print $openGraph;
+                        print '<br>';
+                        print $openGraph2;
+                        print '<br><br>';
+                        print $openGraphDesk;
+                        print '<br><br>';
+                        print $schemaOrgDesk;
+                        ?>
                     </div>
                 </div>
+            </div>
+        </div>
 
 
-                <div class="result-item">
-                    <div class="result-item-short">
-                        <div class="row">
-                            <div class="col-xs-1">
+        <!--REDIRECTS-->
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
 
-                                <?php
+                        <?php
 
-                                if ($checkHeaderPage == 'fail') {
-                                    print "<img src=\"../assets/imgs/$redImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                                } else {
-                                    print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                                }
+                        if (trim($redirectWww) == 'Перенаправление не настроено.') {
+                            print "<img src=\"../assets/imgs/$redImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        } else {
+                            print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        }
 
-                                ?>
+                        ?>
 
-                            </div>
-                            <div class="col-xs-5 result-item-name">
-                                H1-H6 Заголовки
-                            </div>
-                            <div class="col-xs-5 text-right result-item-val">
-                                <?php print $headersPage ?>
-                            </div>
-                            <div class="col-xs-1 text-right">
-                                <a href="javascript:void(0);" class="result-item-more">
-                                    <i class="fa fa-angle-down fa-2x"></i>
-                                </a>
-                            </div>
-                        </div>
                     </div>
-                    <div class="result-item-full" id="header">
-                        <div class="row">
-                            <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
-                                <?php print $headersPageDesk ?>
-                            </div>
-                        </div>
+                    <div class="col-xs-5 result-item-name">
+                        Редиректы
+                    </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                        <?php print $redirectWww ?>
+                    </div>
+                    <div class="col-xs-1 text-right">
+                        <a href="javascript:void(0);" class="result-item-more">
+                            <i class="fa fa-angle-down fa-2x"></i>
+                        </a>
                     </div>
                 </div>
-
-
-                <!--INTERNAL_LINKS-->
-                <div class="result-item">
-                    <div class="result-item-short">
-                        <div class="row">
-                            <div class="col-xs-1">
-
-                                <?php
-
-                                if ($checkNumberWord == 'fail') {
-                                    print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                                } else {
-                                    print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                                }
-
-                                ?>
-
-                            </div>
-                            <div class="col-xs-5 result-item-name">
-                                Количество слов
-                            </div>
-                            <div class="col-xs-5 text-right result-item-val">
-                                <?php print $numberWord ?>
-                            </div>
-                            <div class="col-xs-1 text-right">
-                                <a href="javascript:void(0);" class="result-item-more">
-                                    <i class="fa fa-angle-down fa-2x"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="result-item-full" id="numbWord">
-                        <div class="row">
-                            <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
-                                <?php print $numberWordDesk ?>
-                            </div>
-                        </div>
+            </div>
+            <div class="result-item-full" id="redirect">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
+                        <?php print $redirectWwwDesk ?>
                     </div>
                 </div>
+            </div>
+        </div>
 
 
-                <!--INTERNAL_LINKS-->
-                <div class="result-item">
-                    <div class="result-item-short">
-                        <div class="row">
-                            <div class="col-xs-1">
+        <!--ROBOTS.TXT-->
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
 
-                                <?php
+                        <?php
 
-                                if ($checkLongText == 'fail') {
-                                    print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                                } else {
-                                    print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                                }
+                        if (trim($robotsTxt) == 'Файл robots.txt не найден.') {
+                            print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        } else {
+                            print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        }
 
-                                ?>
+                        ?>
 
-                            </div>
-                            <div class="col-xs-5 result-item-name">
-                                Длина текста
-                            </div>
-                            <div class="col-xs-5 text-right result-item-val">
-                                <?php print $longText ?>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="col-xs-5 result-item-name">
+                        Файл robots.txt
+                    </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                        <?php print $robotsTxt ?>
+                    </div>
+                    <div class="col-xs-1 text-right">
+                        <a href="javascript:void(0);" class="result-item-more">
+                            <i class="fa fa-angle-down fa-2x"></i>
+                        </a>
                     </div>
                 </div>
-
-
-                <!--INTERNAL_LINKS-->
-                <div class="result-item">
-                    <div class="result-item-short">
-                        <div class="row">
-                            <div class="col-xs-1">
-
-                                <?php
-
-                                if ($checkNausea == 'fail') {
-                                    print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                                } else {
-                                    print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                                }
-
-                                ?>
-
-                            </div>
-                            <div class="col-xs-5 result-item-name">
-                                Тошнота (без стоп слов)
-                            </div>
-                            <div class="col-xs-5 text-right result-item-val">
-                                <?php print $nausea ?>
-                            </div>
-                            <div class="col-xs-1 text-right">
-                                <a href="javascript:void(0);" class="result-item-more">
-                                    <i class="fa fa-angle-down fa-2x"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="result-item-full" id="nausea">
-                        <div class="row">
-                            <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
-                                <?php print $nauseaDesk ?>
-                            </div>
-                        </div>
+            </div>
+            <div class="result-item-full" id="robots">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
+                        <?php print $robotsTxtDesk ?>
                     </div>
                 </div>
-
-                <!--ENTER INFO-->
-                <div class="row result-group pushing-top">
-                    <h3>Внешняя оптимизация</h3>
+            </div>
+        </div>
 
 
-                    <div class="result-item">
-                        <div class="result-item-short">
-                            <div class="row">
-                                <div class="col-xs-1">
+        <!--SITEMAP-->
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
 
-                                    <?php
+                        <?php
 
-                                    if (
-                                        trim($checkSocial) == 'fail'
-                                        ||
-                                        trim($checkFacebook) == 'fail'
-                                        ||
-                                        trim($checkVkontakte) == 'fail'
-                                        ||
-                                        trim($checkGooglePlus) == 'fail'
-                                        ||
-                                        trim($checkTwitter) == 'fail'
-                                    ) {
-                                        print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                                    } else {
-                                        print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                                    }
+                        if (trim($siteMap) == 'Карта сайта не найдена.') {
+                            print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        } else {
+                            print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        }
 
-                                    ?>
+                        ?>
 
-                                </div>
-                                <div class="col-xs-5 result-item-name">
-                                    Социальная активность
-                                </div>
-                                <div class="col-xs-5 text-right result-item-val">
-                                    <?php
-
-                                    print $socialOnlDesk;
-                                    print '<br><br>';
-                                    print $socialOnlDesk2;
-
-                                    ?>
-                                </div>
-                                <div class="col-xs-1 text-right">
-                                    <a href="javascript:void(0);" class="result-item-more">
-                                        <i class="fa fa-angle-down fa-2x"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="result-item-full" id="social">
-                            <div class="row">
-                                <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
-                                    <?php
-
-                                    print 'Facebook: ' . '<b>'. $facebook . '</b><br><br>';
-
-                                    print 'Vkontakte: ' . '<b>'. $vkontakte . '</b><br><br>';
-
-                                    print 'Google+: ' . '<b>'. $googlePlus . '</b><br><br>';
-
-                                    print 'Twitter: ' . '<b>'. $twitter . '</b><br><br>';
-
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-
-
-                    <!--INTERNAL_LINKS-->
-                    <div class="result-item">
-                        <div class="result-item-short">
-                            <div class="row">
-                                <div class="col-xs-1">
-
-                                    <?php
-
-                                    if (trim($yandexCatalog) == 'Нет') {
-                                        print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                                    } else {
-                                        print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
-                                    }
-
-                                    ?>
-
-                                </div>
-                                <div class="col-xs-5 result-item-name">
-                                    Яндекс каталог
-                                </div>
-                                <div class="col-xs-5 text-right result-item-val">
-                                    <?php print $yandexCatalog ?>
-                                </div>
-                                <div class="col-xs-1 text-right">
-                                    <a href="javascript:void(0);" class="result-item-more">
-                                        <i class="fa fa-angle-down fa-2x"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="result-item-full" id="catalog">
-                            <div class="row">
-                                <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
-                                    <?php print $yandexCatalogDesk ?>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-xs-5 result-item-name">
+                        Наличие Sitemap
                     </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                        <?php print $siteMap ?>
+                    </div>
+                    <div class="col-xs-1 text-right">
+                        <a href="javascript:void(0);" class="result-item-more">
+                            <i class="fa fa-angle-down fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="result-item-full" id="sitemap">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
+                        <?php print $siteMapDesk ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--FAVICON-->
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
+
+                        <?php
+
+                        if (strlen($favicon) == 67) {
+                            print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        } else {
+                            print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        }
+
+                        ?>
+
+                    </div>
+                    <div class="col-xs-5 result-item-name">
+                        Favicon
+                    </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                        <?php print $favicon ?>
+                    </div>
+                    <div class="col-xs-1 text-right">
+                        <a href="javascript:void(0);" class="result-item-more">
+                            <i class="fa fa-angle-down fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="result-item-full" id="favicon">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
+                        <?php print $faviconDesk ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--INTERNAL_LINKS-->
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
+
+                        <?php
+
+                        if (trim($page404) == 'Все отлично, получен код 404.') {
+                            print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        } else {
+                            print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        }
+
+                        ?>
+
+                    </div>
+                    <div class="col-xs-5 result-item-name">
+                        Страница 404
+                    </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                        <?php
+                        print $page404;
+                        print '<br>';
+                        print $page404_2;
+                        ?>
+                    </div>
+                    <div class="col-xs-1 text-right">
+                        <a href="javascript:void(0);" class="result-item-more">
+                            <i class="fa fa-angle-down fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="result-item-full" id="404">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
+                        <?php
+                        print $page404Desk;
+                        print '<br>';
+                        print $page404Desk_2;
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--INTERNAL_LINKS-->
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
+
+                        <?php
+
+                        print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+
+                        ?>
+
+                    </div>
+                    <div class="col-xs-5 result-item-name">
+                        Скорость загрузки
+                    </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                        <?php print $speedLoad ?>
+                    </div>
+                    <div class="col-xs-1 text-right">
+                        <a href="javascript:void(0);" class="result-item-more">
+                            <i class="fa fa-angle-down fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="result-item-full" id="speed">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
+                        <?php
+
+                        print $cashBrowser . ': ';
+                        print ' ';
+                        print $cashBrowserDesk . '<br><br>';
+
+                        print $timeRespone . ': ';
+                        print ' ';
+                        print $timeResponeDesk . '<br><br>';
+
+                        print $gzip . ': ';
+                        print ' ';
+                        print $gzipDesk . '<br><br>';
+
+                        print $compressImage . ': ';
+                        print ' ';
+                        print $compressImageDesk . '<br><br>';
+
+
+                        print $minifyRes . ': ';
+                        print ' ';
+                        print $minifyResDesk . '<br><br>';
+
+                        print $visibleCont . ': ';
+                        print ' ';
+                        print $visibleContDesk . '<br><br>';
+
+                        print $jsHtmlCss . ': ';
+                        print ' ';
+                        print $jsHtmlCssDesk . '<br><br>';
+
+                        print $redirectSpeed . ': ';
+                        print ' ';
+                        print $redirectSpeedDesk . '<br><br>';
+
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--ENTER INFO-->
+    <div class="row result-group pushing-top">
+        <h3>Текстовая оптимизация</h3>
+
+
+        <!--INTERNAL_LINKS-->
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
+
+                        <?php
+
+                        if (trim($titleLink) == 'Не найдено.') {
+                            print "<img src=\"../assets/imgs/$redImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        } else {
+                            print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        }
+
+                        ?>
+
+
+                    </div>
+                    <div class="col-xs-5 result-item-name">
+                        Title
+                    </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                        <?php print $titleLink ?>
+                    </div>
+                    <div class="col-xs-1 text-right">
+                        <a href="javascript:void(0);" class="result-item-more">
+                            <i class="fa fa-angle-down fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="result-item-full" id="title">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
+                        <?php print $titleLinkDesk ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--INTERNAL_LINKS-->
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
+
+                        <?php
+
+                        if (trim($headerLinkDesk) == 'Не найдено.') {
+                            print "<img src=\"../assets/imgs/$redImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        } else {
+                            print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        }
+
+                        ?>
+
+                    </div>
+                    <div class="col-xs-5 result-item-name">
+                        Description
+                    </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                        <?php print $headerLinkDesk ?>
+                    </div>
+                    <div class="col-xs-1 text-right">
+                        <a href="javascript:void(0);" class="result-item-more">
+                            <i class="fa fa-angle-down fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="result-item-full" id="desk">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
+                        <?php print $headerLinkDesk2 ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
+
+                        <?php
+
+                        if ($checkHeaderPage == 'fail') {
+                            print "<img src=\"../assets/imgs/$redImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        } else {
+                            print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        }
+
+                        ?>
+
+                    </div>
+                    <div class="col-xs-5 result-item-name">
+                        H1-H6 Заголовки
+                    </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                        <?php print $headersPage ?>
+                    </div>
+                    <div class="col-xs-1 text-right">
+                        <a href="javascript:void(0);" class="result-item-more">
+                            <i class="fa fa-angle-down fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="result-item-full" id="header">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
+                        <?php print $headersPageDesk ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--INTERNAL_LINKS-->
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
+
+                        <?php
+
+                        if ($checkNumberWord == 'fail') {
+                            print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        } else {
+                            print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        }
+
+                        ?>
+
+                    </div>
+                    <div class="col-xs-5 result-item-name">
+                        Количество слов
+                    </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                        <?php print $numberWord ?>
+                    </div>
+                    <div class="col-xs-1 text-right">
+                        <a href="javascript:void(0);" class="result-item-more">
+                            <i class="fa fa-angle-down fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="result-item-full" id="numbWord">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
+                        <?php print $numberWordDesk ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--INTERNAL_LINKS-->
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
+
+                        <?php
+
+                        if ($checkLongText == 'fail') {
+                            print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        } else {
+                            print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        }
+
+                        ?>
+
+                    </div>
+                    <div class="col-xs-5 result-item-name">
+                        Длина текста
+                    </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                        <?php print $longText ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--INTERNAL_LINKS-->
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
+
+                        <?php
+
+                        if ($checkNausea == 'fail') {
+                            print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        } else {
+                            print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        }
+
+                        ?>
+
+                    </div>
+                    <div class="col-xs-5 result-item-name">
+                        Тошнота (без стоп слов)
+                    </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                        <?php print $nausea ?>
+                    </div>
+                    <div class="col-xs-1 text-right">
+                        <a href="javascript:void(0);" class="result-item-more">
+                            <i class="fa fa-angle-down fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="result-item-full" id="nausea">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
+                        <?php print $nauseaDesk ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--ENTER INFO-->
+    <div class="row result-group pushing-top">
+        <h3>Внешняя оптимизация</h3>
+
+
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
+
+                        <?php
+
+                        if (
+                            trim($checkSocial) == 'fail'
+                            ||
+                            trim($checkFacebook) == 'fail'
+                            ||
+                            trim($checkVkontakte) == 'fail'
+                            ||
+                            trim($checkGooglePlus) == 'fail'
+                            ||
+                            trim($checkTwitter) == 'fail'
+                        ) {
+                            print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        } else {
+                            print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        }
+
+                        ?>
+
+                    </div>
+                    <div class="col-xs-5 result-item-name">
+                        Социальная активность
+                    </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                        <?php
+
+                        print $socialOnlDesk;
+                        print '<br><br>';
+                        print $socialOnlDesk2;
+
+                        ?>
+                    </div>
+                    <div class="col-xs-1 text-right">
+                        <a href="javascript:void(0);" class="result-item-more">
+                            <i class="fa fa-angle-down fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="result-item-full" id="social">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
+                        <?php
+
+                        print 'Facebook: ' . '<b>' . $facebook . '</b><br><br>';
+
+                        print 'Vkontakte: ' . '<b>' . $vkontakte . '</b><br><br>';
+
+                        print 'Google+: ' . '<b>' . $googlePlus . '</b><br><br>';
+
+                        print 'Twitter: ' . '<b>' . $twitter . '</b><br><br>';
+
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--INTERNAL_LINKS-->
+        <div class="result-item">
+            <div class="result-item-short">
+                <div class="row">
+                    <div class="col-xs-1">
+
+                        <?php
+
+                        if (trim($yandexCatalog) == 'Нет') {
+                            print "<img src=\"../assets/imgs/$yellowImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        } else {
+                            print "<img src=\"../assets/imgs/$greenImg\" width=\"100%\" style=\"max-width: 30px;\" alt=\"state\">";
+                        }
+
+                        ?>
+
+                    </div>
+                    <div class="col-xs-5 result-item-name">
+                        Яндекс каталог
+                    </div>
+                    <div class="col-xs-5 text-right result-item-val">
+                        <?php print $yandexCatalog ?>
+                    </div>
+                    <div class="col-xs-1 text-right">
+                        <a href="javascript:void(0);" class="result-item-more">
+                            <i class="fa fa-angle-down fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="result-item-full" id="catalog">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 result-item-full-content">
+                        <?php print $yandexCatalogDesk ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
