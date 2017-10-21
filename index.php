@@ -45,6 +45,9 @@ if (isset($_POST['analys']) && !empty($_POST['url'])) {
 
     require_once __DIR__ . '/tools/index.php';
 
+
+    require_once __DIR__ . '/assets/library/OpenItem.php';
+
 } else {
     require_once __DIR__ . '/main.php';
 }

@@ -291,8 +291,8 @@ body {
 }
 
 .result-group {
-  border: 1px solid #d6e6ef;
-  margin-top: 20px;
+  border: 2px solid #d6e6ef;
+  margin-top: 40px;
   margin-bottom: 20px;
   padding: 20px 30px;
   box-sizing: border-box;
@@ -312,7 +312,7 @@ body {
 }
 
 .result-item {
-  border-bottom: 1px solid #d6e6ef;
+  border-bottom: 2px solid #d6e6ef;
   padding: 20px 0;
   margin-bottom: 30px;
 }
@@ -416,4 +416,8 @@ footer .footer-menu li a {
   font-size: 20px;
   margin-right: 10px;
   margin-top: 20px;
+}
+
+.row.result-group.pushing-top {
+  margin-top: 120px;
 }

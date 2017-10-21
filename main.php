@@ -112,11 +112,6 @@
                 <strong>
                     &copy; 2017. Все права защищены
                 </strong>
-                <div class="footer-text">
-                    <a href="https://vk.com/atawerrus">Программист проекта<br>
-                    нажмите чтобы нанять программиста.
-                    </a>
-                </div>
             </div>
         </div>
     </div>

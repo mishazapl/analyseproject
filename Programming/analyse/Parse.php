@@ -9,23 +9,13 @@ $yandexTic = liw\Programming\analyse\HandlerAnalyse::parseHeaderText('#yandexCit
 
 $yandexTicDesk = liw\Programming\analyse\HandlerAnalyse::parseHeaderText('#yandexCitationDescription');
 
+$checkYandexTic = liw\Programming\analyse\HandlerAnalyse::parseHeaderSelect('#yandexCitation > div.check-test.test-body','test-status');
 
-if (
-    $yandexTic > '1&nbsp;000'
-    &&
-    $yandexTic != 'Нет'
-) {
-    ++$green;
-} elseif (
-    $yandexTic < '1&nbsp;000'
-    &&
-    $yandexTic > '100'
-    &&
-    $yandexTic != 'Нет'
-) {
-    ++$yellow;
-} else {
+
+if (trim($checkYandexTic) == 'fail' || trim($checkYandexTic) == 'info') {
     ++$red;
+} else {
+    ++$green;
 }
 
 
@@ -486,4 +476,53 @@ if (
     ++$green;
 }
 
+/**
+ * Social Online
+ */
 
+$socialOnlDesk = liw\Programming\analyse\HandlerAnalyse::parseHeaderText('#socialCounters .content-test p');
+$socialOnlDesk2 = liw\Programming\analyse\HandlerAnalyse::parseHeaderHtml('#socialCounters .content-test table');
+
+/**
+ * Facebook
+ */
+
+$facebook = liw\Programming\analyse\HandlerAnalyse::parseHeaderHtml('#facebookSocial .content-test');
+
+$vkontakte = liw\Programming\analyse\HandlerAnalyse::parseHeaderHtml('#vkontakteSocial .content-test');
+
+$googlePlus = liw\Programming\analyse\HandlerAnalyse::parseHeaderHtml('#googlePlusSocial .content-test');
+
+$twitter = liw\Programming\analyse\HandlerAnalyse::parseHeaderHtml('#twitterSocial .content-test');
+
+
+
+/**
+ * Social Check Red or Green!
+ */
+
+$checkSocial = liw\Programming\analyse\HandlerAnalyse::parseHeaderSelect('#socialCounters > div.check-test.test-body', 'test-status');
+
+$checkFacebook = liw\Programming\analyse\HandlerAnalyse::parseHeaderSelect('#facebookSocial > div.check-test.test-body', 'test-status');
+
+$checkVkontakte = liw\Programming\analyse\HandlerAnalyse::parseHeaderSelect('#vkontakteSocial > div.check-test.test-body', 'test-status');
+
+$checkGooglePlus = liw\Programming\analyse\HandlerAnalyse::parseHeaderSelect('#googlePlusSocial > div.check-test.test-body', 'test-status');
+
+$checkTwitter = liw\Programming\analyse\HandlerAnalyse::parseHeaderSelect('#twitterSocial > div.check-test.test-body', 'test-status');
+
+if (
+    trim($checkSocial) == 'fail'
+    ||
+    trim($checkFacebook) == 'fail'
+    ||
+    trim($checkVkontakte) == 'fail'
+    ||
+    trim($checkGooglePlus) == 'fail'
+    ||
+    trim($checkTwitter) == 'fail'
+) {
+    ++$yellow;
+} else {
+    ++$green;
+}
